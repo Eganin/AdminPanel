@@ -14,9 +14,9 @@ class SearchField extends StatelessWidget {
           hintText: 'Search',
           fillColor: secondaryColor,
           filled: true,
-          border: OutlineInputBorder(
+          border: const  OutlineInputBorder(
             borderSide: BorderSide.none,
-            borderRadius: const BorderRadius.all(
+            borderRadius:BorderRadius.all(
               Radius.circular(10.0),
             ),
           ),
@@ -26,9 +26,9 @@ class SearchField extends StatelessWidget {
               padding: const EdgeInsets.all(defaultPadding * 0.75),
               margin:
                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-              decoration: BoxDecoration(
+              decoration:const BoxDecoration(
                 color: primaryColor,
-                borderRadius: const BorderRadius.all(
+                borderRadius:  BorderRadius.all(
                   Radius.circular(10.0),
                 ),
               ),

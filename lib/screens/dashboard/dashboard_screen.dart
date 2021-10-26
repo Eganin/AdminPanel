@@ -1,4 +1,5 @@
 import 'package:admin_panel/models/recent_file.dart';
+import 'package:admin_panel/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../constants.dart';
@@ -68,16 +69,23 @@ class DashBoardScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+                      if (Responsive.isMobile(context))
+                        const SizedBox(
+                          height: defaultPadding,
+                        ),
+                      if (Responsive.isMobile(context)) const StorageDetails(),
                     ],
                   ),
                 ),
-                const SizedBox(
-                  width: defaultPadding,
-                ),
-                const Expanded(
-                  flex: 2,
-                  child: StorageDetails(),
-                ),
+                if (!Responsive.isMobile(context))
+                  const SizedBox(
+                    width: defaultPadding,
+                  ),
+                if (!Responsive.isMobile(context))
+                  const Expanded(
+                    flex: 2,
+                    child: StorageDetails(),
+                  ),
               ],
             ),
           ],

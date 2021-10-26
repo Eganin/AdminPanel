@@ -1,3 +1,4 @@
+import 'package:admin_panel/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -15,7 +16,7 @@ class ProfileCard extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         color: secondaryColor,
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(10.0),
         ),
         border: Border.all(color: Colors.white10),
@@ -26,12 +27,13 @@ class ProfileCard extends StatelessWidget {
             'assets/images/profile_pic.png',
             height: 38,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: defaultPadding / 2),
-            child: Text('Angela Joulin'),
-          ),
-          Icon(Icons.keyboard_arrow_down),
+          if(!Responsive.isMobile(context))
+            const Padding(
+              padding:  EdgeInsets.symmetric(
+                  horizontal: defaultPadding / 2),
+              child: Text('Angela Joulin'),
+            ),
+          const Icon(Icons.keyboard_arrow_down),
         ],
       ),
     );
