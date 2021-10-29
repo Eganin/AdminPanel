@@ -1,6 +1,5 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-
 import '../../../constants.dart';
 class Chart extends StatelessWidget {
   const Chart({Key? key}) : super(key: key);
@@ -36,7 +35,7 @@ class Chart extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       height: 0.5),
                 ),
-                Text('of 128GB'),
+                const Text('of 128GB'),
               ],
             ),
           ),

@@ -10,4 +10,10 @@ class MenuController extends ChangeNotifier {
       _scaffoldKey.currentState?.openDrawer();
     }
   }
+
+  void closeDrawer({required BuildContext context}) {
+    if (!_scaffoldKey.currentState!.isDrawerOpen) {
+      Navigator.pop(context);
+    }
+  }
 }

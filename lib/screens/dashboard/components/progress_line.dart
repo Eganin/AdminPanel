@@ -27,16 +27,17 @@ class ProgressLine extends StatelessWidget {
           ),
         ),
         LayoutBuilder(
-            builder: (context, constraints) => Container(
-                  width: constraints.maxWidth * (percentage / 100),
-                  height: 5,
-                  decoration: BoxDecoration(
-                    color: color,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                )),
+          builder: (context, constraints) => Container(
+            width: constraints.maxWidth * (percentage / 100),
+            height: 5,
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
