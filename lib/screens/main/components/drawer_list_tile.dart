@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DrawerListTile extends StatelessWidget {
-  DrawerListTile({
+  const DrawerListTile({
     required this.title,
     required this.svgSrc,
     required this.press,
